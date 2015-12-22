@@ -20,9 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'ricf2mf-!p8o=$*%&w8*_j)u1#&yta01o$19dqbj+o4u1&)ci1'
 
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1',]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -127,11 +127,12 @@ LOGGING = {
      },
  }
 
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
-ADMINS = (
-    ('Admin', 'admin@pybursa.com'),
-    ('Director', 'director@pybursa.com'),
-    ('Manager', 'manager@pybursa.com'),
-    ('My', 'apbutenko@gmail.com'),
-)
+#EMAIL_HOST = 'localhost'
+#EMAIL_PORT = 1025
+#ADMINS = (
+#    ('Admin', 'admin@pybursa.com'),
+#    ('Director', 'director@pybursa.com'),
+#    ('Manager', 'manager@pybursa.com'),
+#    ('My', 'apbutenko@gmail.com'),
+#)
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static_files/')

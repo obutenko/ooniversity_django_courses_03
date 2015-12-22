@@ -52,10 +52,10 @@ class FeedbackView(CreateView):
         return context
 
 def handler404(request):
-    response = render_to_response('404.html', { 'message' : 'Sorry, page is not found' },
-                                  context_instance=RequestContext(request))
+    response = render_to_response('404.html', { 'message' : 'Sorry, page is not found' }, context_instance=RequestContext(request))
     response.status_code = 404
     return response
+
 def handler500(request):
     response = render_to_response('500.html', { 'message' : 'Sorry, internal server error occurred' }, context_instance=RequestContext(request))
     response.status_code = 500

@@ -1,11 +1,9 @@
-from django.conf.urls import patterns, include, url, handler404, handler500
+from django.conf.urls import patterns, include, url
 from django.contrib import admin
-
-from pybursa import views
+from pybursa.views import index, contact, student_list, student_detail
+from quadratic.views import quadratic_results
 from feedbacks.views import FeedbackView
-
-handler404 = "pybursa.views.handler404"
-handler500 = "pybursa.views.handler500"
+from pybursa import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
@@ -20,3 +18,6 @@ urlpatterns = patterns('',
     url(r'^students/', include('students.urls', namespace="students")),
     url(r'^coaches/', include('coaches.urls', namespace="coaches")),
 )
+
+handler404 = "pybursa.views.handler404"
+handler500 = "pybursa.views.handler500"
